@@ -7,9 +7,9 @@ output "cluster_name" {
 }
 
 output "asg_arn" {
-  value = var.instances_desired > 0 ? aws_autoscaling_group.ASG[0].arn : null
+  value = aws_autoscaling_group.ASG.arn
 }
 
 output "asg_name" {
-  value = var.instances_desired > 0 ? aws_autoscaling_group.ASG[0].name : null
+  value = aws_autoscaling_group.ASG.name
 }

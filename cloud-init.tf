@@ -1,6 +1,4 @@
 data "template_cloudinit_config" "config" {
-  count = var.instances_desired > 0 ? 1 : 0
-
   gzip          = false
   base64_encode = true
 
@@ -26,4 +24,3 @@ data "template_cloudinit_config" "config" {
     }
   }
 }
-
